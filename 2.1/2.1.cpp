@@ -12,7 +12,7 @@
 int main()
 {
 	//Завдання 1
-	float FloatArray1[10] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	float FloatArray1[10];
 	for (int i = 0; i < sizeof(FloatArray1) / sizeof(FloatArray1[0]); i++)
 	{
 		if (i % 2 != 0)
