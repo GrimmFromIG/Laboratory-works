@@ -21,16 +21,16 @@ int main()
 	Int1 = 37;
 	Flt1 = 95.41;
 	UShort1 = 5743;
-	
-    double Dbl1;
-    int Int2;
-    char Char3;
-    Dbl1 = Int1; 
-    Int2 = (int)Flt1;
-    char* pChar3;
-    void* pV;
-    pV = &UShort1;
-    pChar3 = (char*)pV;
-    Char3 = *pChar3;
+
+	double Dbl1;
+	int Int2;
+	char Char3;
+	Dbl1 = Int1;
+	Int2 = (int)Flt1;
+	char* pChar3;
+	void* pV;
+	pV = &UShort1;
+	pChar3 = (char*)pV;
+	Char3 = *pChar3;
 	return 0;
 }
