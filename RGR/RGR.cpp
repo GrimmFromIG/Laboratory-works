@@ -11,7 +11,6 @@ bool isValidLV(const std::string& str)
 int main()
 {
     std::string testStrings[] = { "$CDF:$567", "$CDF:$AAA", "$CDF:$A88", "$:SAAA" };
-
     for (const auto& str : testStrings) 
     {
         if (isValidLV(str)) 
