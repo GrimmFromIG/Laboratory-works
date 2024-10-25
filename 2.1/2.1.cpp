@@ -37,6 +37,21 @@ int main()
 			}
 		}
 	}
+	int k1 = 0;
+	while (k1 < sizeof(FloatArray1) / sizeof(FloatArray1[0]))
+	{
+		if (k1 == sizeof(FloatArray1) / sizeof(FloatArray1[0]) -1 )
+		{
+			std::cout << FloatArray1[k1];
+			k1++;
+		}
+		else
+		{
+			std::cout << FloatArray1[k1] << " | ";
+			k1++;
+		}
+	}
+	std::cout << std::endl;
 	//Завдання 2
 	std::cout << "Task 2" << std::endl;
 	int IntArray1[10];
@@ -70,6 +85,7 @@ int main()
 		if (IntArray3[i] > 101)
 			SumOfArray3 += IntArray3[i];
 	}
+	std::cout << SumOfArray3 << std::endl;
 	//Завдання 3
 	std::cout << "Task 3" << std::endl;
 	float FloatArray2[5][4] =
@@ -93,12 +109,21 @@ int main()
 		}
 		IntArray4[i] = mult;
 	}
-	int kg = 0;
-	while (kg < sizeof(IntArray4)/sizeof(IntArray4[0]))
+	int k3 = 0;
+	while (k3 < sizeof(IntArray4)/sizeof(IntArray4[0]))
 	{
-		std::cout << IntArray4[kg] << " ";
-		kg++;
+		if (k3 == sizeof(IntArray4) / sizeof(IntArray4[0]) -1)
+		{
+			std::cout << IntArray4[k3];
+			k3++;
+		}
+		else
+		{
+			std::cout << IntArray4[k3] << " | ";
+			k3++;
+		}
 	}
+	std::cout << std::endl;
 	int IntArray5[5][5];
 
 	return 0;
