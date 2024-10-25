@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <locale>
+#include <Windows.h>
 
 enum Names { Taras, Jeff, Seva, Kate, Stacy, Panas, John, Arthur, Micah, Dutch, Hosea, Lenny, Javier};
 struct Student1
@@ -25,6 +26,9 @@ struct Student2
 
 int main()
 {
+    setlocale(LC_CTYPE, "ukr"); //Вивід українського тексту у консоль
+    SetConsoleOutputCP(1251);
+
     //Частина 1
     std::cout << "Частина 1" << std::endl;
     Student1 myStudents1[7];
@@ -38,27 +42,38 @@ int main()
         myStudents1[6].yearOfStudy1 = 5;
         myStudents1[6].army1 = true;
 
-        int count = 0;
+        int count1 = 0;
         for (int i = 0; i < 7; i++)
         {
             if (myStudents1[i].yearOfStudy1 == 5 && myStudents1[i].army1 == true)
             {
-                count++;
+                count1++;
             }
         }
-        float percent = (float)count * 100 / 7;
-        std::cout << percent << "%" << std::endl;
+        float percent1 = (float)count1 * 100 / 7;
+        std::cout << percent1 << "%" << std::endl;
         //Частина 2
         std::cout << "Частина 2" << std::endl;
         Student2 myStudents2[7];
             myStudents2[0] = { Micah, 4.5, 3 };
             myStudents2[1] = { Javier, 4.4, 3 };
-            myStudents2[2] = { John, 3.9, 2 };
+            myStudents2[2] = { John, 5, 2 };
             myStudents2[3] = { Lenny, 3, 1 };
             myStudents2[4] = { Arthur, 5, 5 };
             myStudents2[5] = { Dutch, 4, 6 };
             myStudents2[6].name2 = Hosea;
             myStudents2[6].yearOfStudy2 = 6;
             myStudents2[6].score2 = 4.6;
+
+            int count2 = 0;
+            for (int i = 0; i < 7; i++)
+            {
+                if (myStudents2[i].yearOfStudy2 == 2 && myStudents2[i].score2 >= 4.5)
+                {
+                    count2++;
+                }
+            }
+            float percent2 = (float)count2 * 100 / 7;
+            std::cout << percent2 << "%" << std::endl;
         return 0;
 }
