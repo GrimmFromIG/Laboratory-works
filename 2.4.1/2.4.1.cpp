@@ -12,8 +12,7 @@
 
 int main()
 {
-    setlocale(LC_CTYPE, "ukr");
-    SetConsoleOutputCP(1251);
+    setlocale(LC_CTYPE, "ukr"); SetConsoleOutputCP(1251);
 
     return 0;
 }
