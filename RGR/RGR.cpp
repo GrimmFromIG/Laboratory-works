@@ -13,7 +13,6 @@
 
 bool isValidLV(const std::string& str) 
 {
-    // Regular expression pattern for the language L(V)
     const std::regex pattern(R"(0[0-9]*![0-9]*1)");
     return std::regex_match(str, pattern);
 }
@@ -24,7 +23,7 @@ int main() {
     for (const auto& str : testStrings)
     {
         if (isValidLV(str)) {
-            std::cout << str << " are element L(V)" << std::endl;
+            std::cout << str << " are element of L(V)" << std::endl;
         }
         else {
             std::cout << str << " are not element of L(V)" << std::endl;
