@@ -36,7 +36,6 @@ bool isValidLV(const std::string& str)
     }
     return true;
 }
-
 int main() 
 {
     while (true) 
