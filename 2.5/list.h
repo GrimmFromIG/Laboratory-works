@@ -11,7 +11,8 @@ struct List
 {
     ListNode* head;
     List() : head(NULL) {}
-    void addsecond(int);
+    void addSecond(int);
+    void addEnd(int);
 };
 inline bool checkislesserthan5(ListNode* element)
 {
